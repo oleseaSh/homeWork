@@ -1,0 +1,54 @@
+<!doctype html>
+<title>Шаблон сайта</title>
+<style>
+body { 
+  display: grid;
+  max-width: 1200px;
+  grid-template-areas: 
+    "header header"
+    "nav nav"
+    "one article"
+    "footer footer";
+  grid-template-rows: 150px 50px 600px 130px;
+  grid-template-columns: 25% 75%;
+  grid-gap: 2px;
+  height: 100vh;
+  margin: 0;
+  }
+header, footer, article, left, nav, div {
+  padding: 20px;
+  
+}
+#pageHeader {
+  grid-area: header;
+  background-color: rgb(248, 199, 134);
+}
+#pageFooter {
+  grid-area: footer;
+  background-color: rgb(219, 188, 147);
+}
+#mainNav1 {
+  grid-area: nav;
+  background-color: rgb(120, 136, 106); 
+}
+#mainArticle { 
+  grid-area: article;  
+  background-color: rgb(248, 199, 134);     
+  }
+#mainNav { 
+  grid-area: one; 
+  background-color: rgb(219, 188, 147);
+  }
+#siteAds { 
+  grid-area: ads;
+  background-color: rgb(248, 199, 134); 
+  }
+</style>
+<body>
+  <header id="pageHeader">Шапка сайта</header>
+  <nav id="mainNav1">Блок навигации</nav>
+  <article id="mainArticle">Основной контент страницы</article>
+  <nav id="mainNav">Боковая панель</nav>
+
+  <footer id="pageFooter">Footer</footer>
+</body>
