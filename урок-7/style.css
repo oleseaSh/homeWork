@@ -19,11 +19,22 @@ body {
     width: 50px;
     height: 30px;
     background-color: rgb(197, 196, 196);
+
 }
 .text-1 {
     width: 400px;
         display: inline-block;
+        text-align: justify;
 }
+.text-2 {
+    width: 400px;
+        display: inline-block;
+        border-left: 3px solid blue;
+        border-left-style: dotted;
+        padding: 0 0 0 15px;
+        text-align: justify;
+}
+
 q {
 font-size: 15px;
 }
@@ -49,4 +60,81 @@ ol > li {
 ol > li:before {
     content: counter(list) ") ";
     counter-increment: list;
+}
+.text-3 {
+    width: 400px;
+        display: inline-block;
+        color: orangered;
+        background-color: black;
+        border: 3px solid red;
+        padding: 20px;
+        margin-bottom: 20px;
+        text-align: justify;
+
+        
+}
+.containerBox {
+    display: flex;
+    flex-direction: column;
+    }
+
+.box {
+    margin: 0;
+}
+.scroll-box {
+    margin: 60px;
+    background-color: beige;
+    border-top: 5px double green;
+    border-bottom: 5px double green;
+    color: darkgoldenrod;
+    text-align: justify;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-family: sans-serif;
+    font-size: 14px;
+    overflow-y: scroll;
+    width: 400px;
+    height: 80px;
+    text-indent: 15px;
+    letter-spacing: 2px;
+}
+
+.container_9 {
+    width: 50%;
+    background-color: white;
+    border-left: 2px solid rgb(218, 215, 215);
+    padding: 20px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+    color: #5c5b5b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    background-color: rgb(236, 236, 230);
+    border: 1px solid rgb(212, 210, 210);
+    border-radius: 2px;
+    padding: 10px;
+
+}
+.bem {
+    color: #5c5b5b; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    background-color: rgb(236, 236, 230);
+    border: 1px solid rgb(212, 210, 210);
+    border-radius: 2px;
+    padding: 5px;
+}
+.bem {
+    display: inline-block;
+}
+.scroll {
+    margin: 4px, 4px;
+    padding: 4px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
