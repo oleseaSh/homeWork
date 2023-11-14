@@ -356,3 +356,36 @@ margin-bottom:50px;
     background-color: rgb(218, 218, 218);
     color: white;
  }
+
+ .container_16 {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    align: auto;
+    border: 1px solid #191919;
+    grid-template-columns:  2fr 4fr;
+    grid-template-columns:  2fr 3fr;
+
+       justify-content: center;
+    grid-gap: 20px;
+    padding: 20px;
+ }
+.box-1 {
+    background-color: red;
+    border: 1px solid #191919;
+    
+}
+.box-2 {
+    background-color: blue;
+    border: 1px solid #191919;
+    
+}
+.box-3 {
+    background-color: green;
+    border: 1px solid #191919;
+    height: auto;
+}
+.box-4 {
+    background-color: yellow;
+    border: 1px solid #191919;
+}
