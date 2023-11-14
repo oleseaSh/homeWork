@@ -319,8 +319,9 @@ padding: 15px;
     width: 600px;
     height: 350px;
     
-display: flexbox;
+display: flex;
 padding: 15px;
+margin-bottom:50px;
 }
 
 .scroll-box_2 {
@@ -331,15 +332,27 @@ padding: 15px;
     padding-right: 17px;
     font-family: sans-serif;
     font-size: 14px;
-    overflow-y: scroll;
-    width: 80%;
+    overflow: auto;
+    overflow-x: auto;
+    
+    
+   
 }
 #four {
     
         position: absolute;
-        left: 20px;
         background: rgb(252, 249, 249);
-        width: 30px;
-        height: auto;
-      
+        background-color: azure;
+        border: 1px solid #c7c5c5;
+        width: 100px;
+        height: 60px;
+        padding: 5px;
+        margin-top: 150px;
+        left: 67px;
+        cursor: pointer;
 }
+ 
+ #four:active {
+    background-color: rgb(218, 218, 218);
+    color: white;
+ }
