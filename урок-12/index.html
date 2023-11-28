@@ -18,11 +18,11 @@
         <ul>
             <li>
                 <label for="name">Имя:*</label>
-                <input type="text" name="name" placeholder="John Doe" id="name">
+                <input type="text" class="form" name="name" placeholder="John Doe" id="name">
             </li>
             <li>
                 <label for="age">Возраст:</label>
-                <input type="number" name="age" placeholder="18" id="age" min="0" max="125">
+                <input type="number" class="form" name="age" placeholder="18" id="age" min="0" max="125">
             </li>
         </ul>
     </fieldset>
@@ -32,11 +32,11 @@
         <ul>
             <li>
                 <label for="email">E-mail:*</label>
-                <input type="email" name="email" placeholder="doe@gmail.com" id="email" required>
+                <input type="email" class="form" name="email" placeholder="doe@gmail.com" id="email" required>
             </li>
             <li>
                 <label for="phone">Телефон:*</label>
-                <input type="tel" name="phone" placeholder="+37360123456" id="phone" maxlength="9" required>
+                <input type="tel" class="form" name="phone" placeholder="+37360123456" id="phone" maxlength="9" required>
             </li>
         </ul>
     </fieldset>
@@ -45,7 +45,7 @@
     <div>
         <legend>Хобби</legend>
         <label for="message"></label>
-        <textarea name="message" id="message" placeholder="Расскажите об вашем хобби"></textarea>
+        <textarea name="message"  class="form" id="message" placeholder="Расскажите об вашем хобби"></textarea>
     </div>
     </fieldset>
 
@@ -66,7 +66,7 @@
             </li>
             <li>
                 <label for="education"> Образование</label>
-                <select name="" id="education">
+                <select name="" class="form" id="education">
                     <option value="secondary">Среднее</option>
                     <option value="secondary vocational">Среднее специальное</option>
                     <option value="higher">Высшее</option>
@@ -89,7 +89,7 @@
         </ul>
     </fieldset>
     <div>
-        <button type="submit">Отправить</button>
+        <button class="button" type="submit">Отправить</button>
         <p>* - обязательные поля</p>
     </div>
 </div>

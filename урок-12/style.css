@@ -1,10 +1,25 @@
+html,body {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+   margin-top: 50px;
+    padding: 50px;
+}
+
+h2 {
+    color: #191919;
+}
+
 fieldset {
     width: 600px;
     height: fit-content;
     background-color: whitesmoke;
-    border:1px solid rgb(223, 222, 222);
-    border-radius: 5px;
+    border:1px solid rgb(119, 119, 119);
+    border-radius: 20px;
     margin: 10px;
+    padding: 10px;
 }
 
 .main {
@@ -14,9 +29,12 @@ fieldset {
     position: absolute;
     align-self: center;
     background-color: rgb(221, 218, 218);
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
     border: 1px solid rgb(204, 203, 203)f;
-    border-radius: 5px;
+    border-radius: 20px;
+    margin-top: 250px;
 }
  .container {
     display: flex;
@@ -24,8 +42,48 @@ fieldset {
     height: 100vh;
     background-color: #fff;
     justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 100px;
+ }
+  
+ li {
+    padding-bottom: 10px;
  }
 
- legend {
-    
+
+ .form {
+    padding-left: 15px;
+    border: 1px solid rgb(160, 160, 160);
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background: white;
  }
+
+ label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #191919;
+    padding: 10px;
+  }
+
+  legend {
+    padding: 10px;
+  }
+
+  .button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #191919;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+  }
+
+  .button:hover {
+    background-color: #707070;
+  }
