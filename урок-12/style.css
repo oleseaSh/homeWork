@@ -34,7 +34,7 @@ fieldset {
     padding-bottom: 50px;
     border: 1px solid rgb(204, 203, 203)f;
     border-radius: 20px;
-    margin-top: 250px;
+    margin-top: 200px;
 }
  .container {
     display: flex;
@@ -42,7 +42,7 @@ fieldset {
     height: 100vh;
     background-color: #fff;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 0px;
     margin-bottom: 100px;
  }
   
