@@ -113,3 +113,53 @@ function t16() {
 
 let button9 = document.querySelector('.b-16');
 button9.addEventListener('click', t16);
+
+function t17() {
+  let input = document.querySelector('.i-17').value;
+  if (isNaN(input)) {
+    console.log('Введено не число');
+  }
+  else {
+    console.log(input);
+  }
+}
+
+document.querySelector('.b-17').addEventListener('click',t17);
+
+function t18() {
+  let a = document.querySelector('.i-18').value;
+  let result = parseFloat(a);
+  document.querySelector('.out-18').innerHTML = result;
+  input.value = '';
+}
+
+let button11 = document.querySelector('.b-18');
+button11.addEventListener('click', t18);
+
+function t19() {
+  let a = parseFloat(document.querySelector('.i-19-1').value);
+  let b = parseFloat(document.querySelector('.i-19-2').value);
+  if (a < 0 && b < 0) {
+      let result = a + b;
+      document.querySelector('.out-19').innerHTML = result;
+  } else {
+      document.querySelector('.out-19').innerHTML = "Please enter two negative numbers.";
+  }
+ 
+}
+
+let button12 = document.querySelector('.b-19');
+button12.addEventListener('click', t19);
+
+let count = 0;
+let button13 = document.querySelector('.b-20');
+let output = document.querySelector('.out-20');
+
+function t20() {
+  count++;
+  output.innerHTML = count;
+}
+
+button13.addEventListener('click', t20);
+
+
