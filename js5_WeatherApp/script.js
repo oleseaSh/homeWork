@@ -30,10 +30,12 @@ function getWeather(cityName) {
         });
 }
 
-// Вызываем функцию для каждого города
-cities.forEach((city) => {
-    getWeather(city);
-});
+// // Вызываем функцию для каждого города
+// cities.forEach((city) => {
+//     getWeather(city);
+// });
+
+
 
 
 
@@ -41,30 +43,42 @@ cities.forEach((city) => {
 
 
 // Формирование списка select с помощью JavaScript:
-const selectElement = document.createElement('select');
 
-const container = document.getElementById('#myContainer'); // Получаем контейнер по его ID
+
+const citySelector = document.getElementById('citySelector'); // Получаем контейнер по его ID
+const currentCity = '';
+
 
 
 const optionLondon = document.createElement('option');
 optionLondon.value = '23232';
 optionLondon.textContent = 'London';
-selectElement.appendChild(optionLondon);
+citySelector.appendChild(optionLondon);
 
 const optionMinsk = document.createElement('option');
 optionMinsk.value = '33456';
 optionMinsk.textContent = 'Minsk';
-selectElement.appendChild(optionMinsk);
+citySelector.appendChild(optionMinsk);
 
 const optionGdansk = document.createElement('option');
 optionGdansk.value = '87968';
 optionGdansk.textContent = 'Gdansk';
-selectElement.appendChild(optionGdansk);
+citySelector.appendChild(optionGdansk);
 
 const optionBozen = document.createElement('option');
 optionBozen.value = '39849';
 optionBozen.textContent = 'Bozen';
-selectElement.appendChild(optionBozen);
+citySelector.appendChild(optionBozen);
+
+
+
+function getCityData() {
+
+    
+}
+
+
+
 
 
 
