@@ -1,3 +1,26 @@
+// текущая дата и время
+const currentDate = new Date();
+
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const month = monthNames[currentDate.getMonth()];
+const day = currentDate.getDate();
+let hours = currentDate.getHours();
+
+const ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; 
+
+const minutes = currentDate.getMinutes();
+const formattedDateTime = `${month} ${day}, ${hours}:${minutes}${ampm}`;
+
+
+const dateTimeElement = document.getElementById('dateTime');
+dateTimeElement.textContent = formattedDateTime;
+
+
+// фунция получения погоды по APIKey
+
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?';
 const APIKey = 'd4573c968916531f2db16825c3a3282f';
 const cities = ['London', 'Minsk', 'Gdansk', 'Kyiv', 'Bozen'];
@@ -30,41 +53,53 @@ function getWeather(cityName) {
         });
 }
 
-
-
-
 // Формирование списка select с помощью JavaScript:
 
 
 const citySelector = document.getElementById('citySelector'); // Получаем контейнер по его ID
 
 
+const optionLisbon = document.createElement('option');
+optionLisbon.value = 'Lisbon';
+optionLisbon.textContent = 'Lisbon';
+citySelector.appendChild(optionLisbon);
 
+const optionMadrid = document.createElement('option');
+optionMadrid.value = 'Madrid';
+optionMadrid.textContent = 'Madrid';
+citySelector.appendChild(optionMadrid);
 
-const optionLondon = document.createElement('option');
-optionLondon.value = '23232';
-optionLondon.textContent = 'London';
-citySelector.appendChild(optionLondon);
-
-const optionMinsk = document.createElement('option');
-optionMinsk.value = '33456';
-optionMinsk.textContent = 'Minsk';
-citySelector.appendChild(optionMinsk);
-
-const optionGdansk = document.createElement('option');
-optionGdansk.value = '87968';
-optionGdansk.textContent = 'Gdansk';
-citySelector.appendChild(optionGdansk);
+const optionCatania = document.createElement('option');
+optionCatania.value = 'Catania';
+optionCatania.textContent = 'Catania';
+citySelector.appendChild(optionCatania);
 
 const optionBozen = document.createElement('option');
-optionBozen.value = '39849';
+optionBozen.value = 'Bozen';
 optionBozen.textContent = 'Bozen';
 citySelector.appendChild(optionBozen);
 
+const firstCity = citySelector.options[0].value; // Получаем значение первого города в списке
+    getWeather(firstCity);
+
+
 citySelector.addEventListener('change', function() {
     const selectedCity = this.value; // Получаем выбранный город из списка
-    getWeather(selectedCity); // Запускаем функцию getWeather для выбранного города
+    getWeather(selectedCity);
 });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const citySelector = document.getElementById('citySelector');
+//     const firstCity = citySelector.options[0].value; // Получаем значение первого города в списке
+//     getWeather(firstCity);
+
+//     
+//     citySelector.addEventListener('change', function() {
+//         const selectedCity = this.value; 
+//         getWeather(selectedCity);
+//     });
+// });
 
 
 
