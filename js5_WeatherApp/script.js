@@ -78,5 +78,3 @@ citySelector.addEventListener('change', function() {
 
 
 
-
-
