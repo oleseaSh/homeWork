@@ -30,15 +30,6 @@ function getWeather(cityName) {
         });
 }
 
-// // Вызываем функцию для каждого города
-// cities.forEach((city) => {
-//     getWeather(city);
-// });
-
-
-
-
-
 
 
 
@@ -46,7 +37,7 @@ function getWeather(cityName) {
 
 
 const citySelector = document.getElementById('citySelector'); // Получаем контейнер по его ID
-const currentCity = '';
+
 
 
 
@@ -70,12 +61,18 @@ optionBozen.value = '39849';
 optionBozen.textContent = 'Bozen';
 citySelector.appendChild(optionBozen);
 
+citySelector.addEventListener('change', function() {
+    const selectedCity = this.value; // Получаем выбранный город из списка
+    getWeather(selectedCity); // Запускаем функцию getWeather для выбранного города
+});
 
 
-function getCityData() {
 
-    
-}
+
+
+
+
+
 
 
 
