@@ -74,10 +74,10 @@ optionCatania.value = 'Catania';
 optionCatania.textContent = 'Catania';
 citySelector.appendChild(optionCatania);
 
-const optionBozen = document.createElement('option');
-optionBozen.value = 'Bozen';
-optionBozen.textContent = 'Bozen';
-citySelector.appendChild(optionBozen);
+const optionBolzano = document.createElement('option');
+optionBolzano.value = 'Bolzano';
+optionBolzano.textContent = 'Bolzano';
+citySelector.appendChild(optionBolzano);
 
 const firstCity = citySelector.options[0].value; // Получаем значение первого города в списке
     getWeather(firstCity);
@@ -88,28 +88,43 @@ citySelector.addEventListener('change', function() {
     getWeather(selectedCity);
 });
 
+//  меняем bg:
+document.addEventListener('DOMContentLoaded', function() {
+    const citySelector = document.getElementById('citySelector');
+    const container = document.querySelector('.container'); // Получаем элемент, у которого меняется фон
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const citySelector = document.getElementById('citySelector');
-//     const firstCity = citySelector.options[0].value; // Получаем значение первого города в списке
-//     getWeather(firstCity);
+    // Добавляем обработчик события change для выбора города
+    citySelector.addEventListener('change', function() {
+        const selectedCity = this.value; // Получаем выбранный город из списка
 
-//     
-//     citySelector.addEventListener('change', function() {
-//         const selectedCity = this.value; 
-//         getWeather(selectedCity);
-//     });
-// });
+        // В зависимости от выбранного города, меняем фоновое изображение
+        switch(selectedCity) {
+            case 'Madrid':
+                container.style.backgroundImage = 'url("./images/Madrid.jpg")';
+                break;
+            case 'Catania':
+                container.style.backgroundImage = 'url("./images/Catania.jpg")';
+                break;
+            case 'Bolzano':
+                container.style.backgroundImage = 'url("./images/Bolzano.jpg")';
+                break;
+            case 'Lisbon':
+                container.style.backgroundImage = 'url("./images/Lissabon.jpg")';
+                break;
+            default:
+                container.style.backgroundImage = 'url("./images/Lissabon.jpg")'; // По умолчанию используем фоновое изображение для Лиссабона
+                break;
+        }
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
+    // Добавляем обработчик события click для кнопки с классом 'label'
+    const labelButton = document.querySelector('.label');
+    labelButton.addEventListener('click', function() {
+        const selectedIndex = citySelector.selectedIndex; // Получаем индекс текущего выбранного города
+        const nextIndex = (selectedIndex + 1) % citySelector.options.length; // Вычисляем индекс следующего города
+        citySelector.selectedIndex = nextIndex; // Устанавливаем выбранный город на следующий
+        const selectedCity = citySelector.value; // Получаем выбранный город
+        getWeather(selectedCity); // Вызываем функцию getWeather для нового выбранного города
+        setCityBackground(selectedCity); // Устанавливаем фоновое изображение для нового выбранного города
+    });
+});

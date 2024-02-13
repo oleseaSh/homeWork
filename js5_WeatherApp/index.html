@@ -7,25 +7,32 @@
     <title>AppForecast</title>
 </head>
 <body>
-    <div id="dateTime"></div>
-    <div>
-    <label for="citySelect">Select City</label>
-
-    <select id="citySelector">
-        
-
-     <select>
-    </div>
-    
-        <div class="out">
-            <h2 class="city-name"></h2>
-            <h3 class="temperature"></h3>
-            <p class="image"></p>
-            <p class="description"></p>
-            <p class="wind_direction"></p>
-            <p class="wind_speed"></p>
-            <p class="pressure"></p>
+    <main>
+        <div class="container">
+            <div class="header">
+                <div id="dateTime"></div>
+                <div class="citySelector">
+                    <select id="citySelector"></select>
+                    <button class="label">
+                        <label for="citySelect">Change City</label>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="out">
+                <div class="top"><h1 class="temperature"></h3>
+                    <p class="image"></p>
+                </div>
+                <h2 class="city-name"></h2>
+                
+                <em class="description"></em>
+                <p class="wind_direction"></p>
+                <p class="wind_speed"></p>
+                <p class="pressure"></p>
+           </div>
         </div>
+    </main>
+    
 
   
     <script src="./script.js"></script>
