@@ -32,8 +32,8 @@ function getWeather(cityName) {
     const temperature = document.querySelector('.temperature');
     const image = document.querySelector('.image');
     const description = document.querySelector('.description');
-    const windDirection = document.querySelector('.wind_direction');
-    const windSpeed = document.querySelector('.wind_speed');
+    const windDirection = document.querySelector('.wind-direction');
+    const windSpeed = document.querySelector('.wind-speed');
     const pressure = document.querySelector('.pressure');
 
     fetch(`${BASE_URL}${CityRequest}`)
@@ -108,9 +108,6 @@ optionBolzano.textContent = 'Bolzano';
 citySelector.appendChild(optionBolzano);
 
 
-const firstCity = citySelector.options[0].value; // Получаем значение первого города в списке
-    getWeather(firstCity);
-
 
 //  меняем bg и погоду при смене города:
 
@@ -135,4 +132,10 @@ document.addEventListener('DOMContentLoaded', function() {
         getWeather(selectedCity); // Вызываем функцию getWeather для нового выбранного города
         setCityBackground(selectedCity); // Устанавливаем фоновое изображение для нового выбранного города
     });
+
+    // Получаем значение первого города в списке
+
+    const firstCity = citySelector.options[0].value; 
+    getWeather(firstCity);
 });
+
