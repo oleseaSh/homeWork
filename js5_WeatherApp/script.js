@@ -22,7 +22,7 @@ dateTimeElement.textContent = formattedDateTime;
 // фунция получения погоды по APIKey
 
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?';
-const APIKey = 'd4573c968916531f2db16825c3a3282f';
+const APIKey = '01a3a80c80c58bf6c161964f9556e365';
 const cities = ['London', 'Minsk', 'Gdansk', 'Kyiv', 'Bozen'];
 
 function getWeather(cityName) {
