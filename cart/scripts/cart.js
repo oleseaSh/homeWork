@@ -6,7 +6,6 @@ const cartStorage = JSON.parse(localStorage.getItem('cart') || '[]'); // пар�
 
 if (cartStorage.length !== 0) {
    
-
     const deleteButton = document.createElement('button');
     deleteButton.innerText = `Очистить корзину`;
     deleteItems.appendChild(deleteButton);
@@ -40,30 +39,25 @@ cartStorage.forEach((el) => {
 
     // Обработчик кнопки удаления товара
     newButton.addEventListener('click', (e) => {
-        // Ищем товар по id
+        
         const itemIndex = cartStorage.findIndex((item) => item.itemTitle === e.target.id);
 
         if (itemIndex !== -1) {
-            // Уменьшаем счетчик на 1
             if (cartStorage[itemIndex].count > 0) {
                 cartStorage[itemIndex].count--;
             }
 
-            // Если счетчик достиг нуля, удаляем товар из корзины
-            if (cartStorage[itemIndex].count === 0) {
-                cartStorage.splice(itemIndex, 1);
-            }
+        if (cartStorage[itemIndex].count === 0) {
+          cartStorage.splice(itemIndex, 1);
+          localStorage.setItem('cart', JSON.stringify(cartStorage));
+           newCard.remove();
+        }
 
             // Обновляем хранилище
             localStorage.setItem('cart', JSON.stringify(cartStorage));
-
             // Обновляем счетчик в интерфейсе
             newCount.innerText = `Количество: ${cartStorage[itemIndex].count}`;
 
-            // Если счетчик равен нулю, удаляем элемент из DOM
-            if (cartStorage[itemIndex].count === 0) {
-                newCard.clear();
-            }
         }
     });
 });
@@ -74,9 +68,4 @@ deleteButton.addEventListener('click', () => {
     cartItems.innerHTML = ''; // Очищаем содержимое корзины
 });
 
-    // Обработчик кнопки очистки корзины
-    deleteButton.addEventListener('click', () => {
-        localStorage.clear();
-        location.reload();
-    });
 }
